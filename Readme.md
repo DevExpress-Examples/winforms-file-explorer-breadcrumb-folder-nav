@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[Form1.cs](./CS/FileNavigator/Form1.cs)**
+<!-- default file list end -->
 # How to: Create a file explorer via Breadcrumb Edit control
 
 
