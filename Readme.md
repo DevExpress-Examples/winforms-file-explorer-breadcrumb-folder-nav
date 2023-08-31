@@ -42,3 +42,9 @@ The following events are handled to dynamically generate the Nodes tree accordin
 * [Breadcrumb Edit Control](https://docs.devexpress.com/WindowsForms/16973/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control)
 * [Create Breadcrumb Nodes at Design Time](https://docs.devexpress.com/WindowsForms/114784/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control/how-to-create-breadcrumb-nodes-at-design-time)
 * [Create Breadcrumb Nodes at Runtime](https://docs.devexpress.com/WindowsForms/114783/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control/how-to-create-breadcrumb-nodes-at-runtime)
+
+
+## See Also
+
+* [WinForms File and Folder Browsers](https://docs.devexpress.com/WindowsForms/403445/controls-and-libraries/messages-notifications-and-dialogs/file-and-folder-browsers)
+* [Custom Browsers (FileExplorerAssistant Component)](https://docs.devexpress.com/WindowsForms/403431/controls-and-libraries/messages-notifications-and-dialogs/custom-folder-browsers)
