@@ -3,16 +3,42 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T110842)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-<!-- default file list -->
-*Files to look at*:
 
-* **[Form1.cs](./CS/FileNavigator/Form1.cs)**
-<!-- default file list end -->
-# How to: Create a file explorer via Breadcrumb Edit control
+# WinForms Breadcrumb Editor - Create a folder navigation bar (File Explorer)
+
+This example demonstrates how use the [WinForms Breadcrumb Editor](https://docs.devexpress.com/WindowsForms/16973/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control) to create a folder navigation bar inspired by Microsoft Windows File Explorer.
+
+![WinForms Breadcrumb Editor - Create a folder navigation bar](https://raw.githubusercontent.com/DevExpress-Examples/how-to-create-a-file-explorer-via-breadcrumb-edit-control-t110842/14.1.3%2B/media/winforms-breadcrumbedit-file-explorer.png)
+
+Two root nodes ('Root' and 'Computer') are created at design time. Their [BreadCrumbNode.Persistent](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.BreadCrumbNode.Persistent) and [BreadCrumbNode.PopulateOnDemand](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.BreadCrumbNode.PopulateOnDemand) properties are set to **true**. The **Root** node stores shortcuts to most important directories (Desktop, Windows, Program Files). The **Computer** node allows users to quickly navigate through local disks via related shortcuts.
+
+```csharp
+void InitBreadCrumbRootNode(BreadCrumbNode node) {
+    node.ChildNodes.Add(new BreadCrumbNode("Desktop", Environment.GetFolderPath(Environment.SpecialFolder.Desktop)));
+    node.ChildNodes.Add(new BreadCrumbNode("Windows", Environment.GetFolderPath(Environment.SpecialFolder.Windows)));
+    node.ChildNodes.Add(new BreadCrumbNode("Program Files", Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)));
+}
+void InitBreadCrumbComputerNode(BreadCrumbNode node) {
+    foreach (DriveInfo driveInfo in GetFixedDrives()) {
+        node.ChildNodes.Add(new BreadCrumbNode(driveInfo.Name, driveInfo.RootDirectory));
+    }
+}
+```
+
+The following events are handled to dynamically generate the Nodes tree according to the folder structure:
+
+* [ValidatePath](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit.ValidatePath)
+* [NewNodeAdding](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit.NewNodeAdding)
+* [QueryChildNodes](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.Repository.RepositoryItemBreadCrumbEdit.QueryChildNodes)
 
 
-This example demonstrates how to implement a File Explorer using the DevExpress Breadcrumb Editor.<br />Two root nodes - 'Root' and 'Computer' - are created at design-time, their <a href="https://documentation.devexpress.com/#WindowsForms/DevExpressXtraEditorsBreadCrumbNode_Persistenttopic">BreadCrumbNode.Persistent</a> and <a href="https://documentation.devexpress.com/#WindowsForms/DevExpressXtraEditorsBreadCrumbNode_PopulateOnDemandtopic">BreadCrumbNode.PopulateOnDemand</a> properties are set to true.
+## Files to Review
 
-<br/>
+* [Form1.cs](./CS/FileNavigator/Form1.cs)
 
 
+## Documentation
+
+* [Breadcrumb Edit Control](https://docs.devexpress.com/WindowsForms/16973/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control)
+* [Create Breadcrumb Nodes at Design Time](https://docs.devexpress.com/WindowsForms/114784/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control/how-to-create-breadcrumb-nodes-at-design-time)
+* [Create Breadcrumb Nodes at Runtime](https://docs.devexpress.com/WindowsForms/114783/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control/how-to-create-breadcrumb-nodes-at-runtime)
