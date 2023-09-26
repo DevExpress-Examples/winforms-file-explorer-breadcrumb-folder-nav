@@ -6,7 +6,7 @@
 
 # WinForms Breadcrumb Editor - Create a folder navigation bar (File Explorer)
 
-This example demonstrates how use the [WinForms Breadcrumb Editor](https://docs.devexpress.com/WindowsForms/16973/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control) to create a folder navigation bar inspired by Microsoft Windows File Explorer.
+This example demonstrates how to use the [WinForms Breadcrumb Editor](https://docs.devexpress.com/WindowsForms/16973/controls-and-libraries/editors-and-simple-controls/breadcrumb-edit-control) to create a folder navigation bar inspired by Microsoft Windows File Explorer.
 
 ![WinForms Breadcrumb Editor - Create a folder navigation bar](https://raw.githubusercontent.com/DevExpress-Examples/how-to-create-a-file-explorer-via-breadcrumb-edit-control-t110842/14.1.3%2B/media/winforms-breadcrumbedit-file-explorer.png)
 
