@@ -50,7 +50,7 @@ The following events are handled to dynamically generate the Nodes tree accordin
 * [WinForms File and Folder Browsers](https://docs.devexpress.com/WindowsForms/403445/controls-and-libraries/messages-notifications-and-dialogs/file-and-folder-browsers)
 * [Custom Browsers (FileExplorerAssistant Component)](https://docs.devexpress.com/WindowsForms/403431/controls-and-libraries/messages-notifications-and-dialogs/custom-folder-browsers)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-file-explorer-breadcrumb-folder-nav&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=winforms-file-explorer-breadcrumb-folder-nav&~~~was_helpful=no)
 
